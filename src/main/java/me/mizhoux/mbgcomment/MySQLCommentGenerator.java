@@ -33,10 +33,9 @@ public class MySQLCommentGenerator extends EmptyCommentGenerator {
         String remarks = introspectedTable.getRemarks();
 
         topLevelClass.addJavaDocLine("/**");
-        topLevelClass.addJavaDocLine(" * " + remarks);
-        topLevelClass.addJavaDocLine(" *");
-        topLevelClass.addJavaDocLine(" * @author " + author);
-        topLevelClass.addJavaDocLine(" * @date   " + dateFormatter.format(new Date()));
+        topLevelClass.addJavaDocLine(" * @author: " + author);
+        topLevelClass.addJavaDocLine(" * @date: " + dateFormatter.format(new Date()));
+        topLevelClass.addJavaDocLine(" * @description: " + remarks);
         topLevelClass.addJavaDocLine(" */");
     }
 
